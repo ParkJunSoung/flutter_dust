@@ -4,7 +4,7 @@
 // utility that Flutter provides. For example, you can send tap and scroll
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
-import 'package:flutter_dust/AirResult.dart';
+import 'package:flutter_dust/air_result.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -13,7 +13,7 @@ import 'dart:convert';
 void main() {
   test('http 통신 테스트', () async {
     var uri = Uri.parse(
-        'https://api.airvisual.com/v2/nearest_city?key=59a06f27-fe65-483b-84f6-1192ccf78c59');
+        'https://api.themoviedb.org/3/movie/upcoming?api_key=a64533e7ece6c72731da47c9c8bc691f&language=ko-KR&page=1');
         var response = await http. get (uri);
     expect(response.statusCode, 200);
 
